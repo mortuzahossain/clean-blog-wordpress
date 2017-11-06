@@ -11,8 +11,7 @@ function clean_blog_setup() {
 		'caption',
 	) );
 	add_theme_support( 'post-formats', array(
-		'quote',
-		'link',
+		'quote'
 	) );
 	add_theme_support( 'menus' );
 	register_nav_menu( 'top_menu', 'Top Navigation Menu' );

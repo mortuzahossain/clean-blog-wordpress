@@ -705,6 +705,71 @@ textarea.form-control {
     padding: 6px 20px !important;
 }
 
-inspector-stylesheet:1 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
     margin-top: 22px;
+}
+
+.quote-card {
+    background: #fff;
+    color: #222222;
+    padding: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
+    position: relative;
+}
+
+.quote-card p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+blockquote.quote-card.blue-card {
+    margin: 50px 0;
+    padding: 70px;
+}
+
+.quote-card cite {
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    font-weight: 200;
+    opacity: 0.8;
+}
+
+.quote-card:before {
+    font-family: Georgia, serif;
+    content: "“";
+    position: absolute;
+    top: -42px;
+    left: -16px;
+    font-size: 7em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+    transform: rotate(26deg);
+}
+
+.quote-card:after {
+    font-family: Georgia, serif;
+    content: "”";
+    position: absolute;
+    bottom: 7px;
+    line-height: 15px;
+    right: 20px;
+    font-size: 7em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+    transform: rotate(30deg);
+}
+
+.quote-card.blue-card {
+    background: #0078FF;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(34, 34, 34, 0.12), 0 2px 4px rgba(34, 34, 34, 0.24);
+}
+
+.quote-card.blue-card:before,
+.quote-card.blue-card:after {
+    color: #5FAAFF;
 }
