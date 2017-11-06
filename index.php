@@ -1,25 +1,21 @@
 <?php get_header() ?>
 
-    <header class="masthead" style="background-image: url('<?php echo BASE; ?>/img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('<?php header_image(); ?>')">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Clean Blog</h1>
-              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+              <h1><?php bloginfo( 'title' ) ?></h1>
+              <span class="subheading"><?php bloginfo( 'description' ) ?></span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-
-
-    <!-- Main Content -->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-
 
 <?php if ( have_posts() ) : ?>
   <?php while ( have_posts() ) : the_post(); ?>    
@@ -40,21 +36,18 @@
   <?php endwhile; ?>
 <?php endif; ?>
 
-          <!-- Pager -->
-          <div class="clearfix">
+        <div class="clearfix">
 
 <?php
-    the_posts_navigation(array(
-            'screen_reader_text' => ' ',
-            'next_text' => 'Older',
-            'prev_text' => 'Newer'
-        ));
+    if (function_exists("fellowtuts_wpbs_pagination"))
+    {
+        fellowtuts_wpbs_pagination();
+    }
 ?>
-
             <!-- <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a> -->
-          </div>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
 <?php get_footer( ) ?>
