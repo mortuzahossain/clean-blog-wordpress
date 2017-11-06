@@ -1,6 +1,6 @@
 <?php
 
-require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 define('BASE', get_template_directory_uri());
 
