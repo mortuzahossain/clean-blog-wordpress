@@ -9,6 +9,16 @@ function my_theme_register_required_plugins() {
 			'slug'      => 'cmb2',
 			'required'  => true,
 		),
+		array(
+			'name'      => 'Contact Form 7',
+			'slug'      => 'contact-form-7',
+			'required'  => true,
+		),
+		array(
+			'name'      => 'Contact Form 7 To Database',
+			'slug'      => 'contact-form-cfdb7',
+			'required'  => true,
+		),
 	);
 
 	$config = array(
