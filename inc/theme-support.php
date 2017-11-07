@@ -14,7 +14,9 @@ function clean_blog_setup() {
 		'quote'
 	) );
 	add_theme_support( 'menus' );
+	
 	register_nav_menu( 'top_menu', 'Top Navigation Menu' );
+	register_nav_menu( 'social_bottom', 'Bottom Social Menu' );
 
 
 	$args = array(
@@ -27,4 +29,4 @@ function clean_blog_setup() {
 	add_theme_support( 'custom-header', $args );
 
 }
-add_action( 'after_setup_theme', 'clean_blog_setup' );
+add_action( 'after_setup_theme', 'clean_blog_setup' ); 

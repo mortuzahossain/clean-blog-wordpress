@@ -26,12 +26,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <?php
+            if ( has_nav_menu( 'top_menu' ) ) {
                 wp_nav_menu( array(
                     'theme_location' => 'top_menu',
                     'container'      => false,
                     'menu_class'     => 'navbar-nav ml-auto',
                     'walker'            => new WP_Bootstrap_Navwalker()
                 ) );
+            }
             ?>
         </div>
       </div>

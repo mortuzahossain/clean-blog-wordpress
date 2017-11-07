@@ -19,6 +19,11 @@ function my_theme_register_required_plugins() {
 			'slug'      => 'contact-form-cfdb7',
 			'required'  => true,
 		),
+		array(
+			'name'      => 'Menu Social Icons',
+			'slug'      => 'menu-social-icons',
+			'required'  => true,
+		),
 	);
 
 	$config = array(
