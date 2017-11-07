@@ -23,7 +23,31 @@
         <blockquote class="quote-card blue-card">
           <?php the_content(); ?>
         </blockquote>
+
+
+        <?php
+      $categories = get_the_category();
+      $separator = ' | ';
+      $output = '';
+      if ( ! empty( $categories ) ) {
+?>
+<p class="catagory-title">Catagories:</p>
+<ul>
+<?php
+          foreach( $categories as $category ) {
+              $output .= '<a class="catagory" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+          }
+          echo trim( $output, $separator );
+          ?>
+</ul>          
+<?php } ?> 
+
+
       </div>
+
+
+
+
       <nav role="navigation" class="navigation posts-navigation">
                 <div class="nav-links">
 <?php
