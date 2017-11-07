@@ -19,16 +19,6 @@ function clean_blog_setup() {
 	register_nav_menu( 'top_menu', 'Top Navigation Menu' );
 	register_nav_menu( 'social_bottom', 'Bottom Social Menu' );
 
-
-	add_filter('nav_menu_css_class','social_bottom_menu_classes',110,3);
-
-	function social_bottom_menu_classes($classes, $item, $args) {
-		if($args->theme_location == 'social_bottom') { 
-			$classes[] = 'list-inline-item';
-		}
-		return $classes;
-	}
-
 	$args = array(
 		'flex-width'    => true,
 		'width'         => 980,
@@ -40,3 +30,12 @@ function clean_blog_setup() {
 
 }
 add_action( 'after_setup_theme', 'clean_blog_setup' ); 
+
+add_filter('nav_menu_css_class','social_bottom_menu_classes',110,3);
+
+function social_bottom_menu_classes($classes, $item, $args) {
+	if($args->theme_location == 'social_bottom') { 
+		$classes[] = 'list-inline-item';
+	}
+	return $classes;
+}

@@ -16,13 +16,3 @@ require_once( 'inc/cmb2.php' );
 
 require_once (dirname(__FILE__).'/inc/plugins/class-tgm-plugin-activation.php');
 require_once (dirname(__FILE__).'/inc/plugins/init.php');
-
-
-add_filter('nav_menu_css_class','social_bottom_menu_classes',110,3);
-
-function social_bottom_menu_classes($classes, $item, $args) {
-    if($args->theme_location == 'social_bottom') { // name need menu
-        $classes[] = 'list-inline-item'; // add classes
-    }
-    return $classes;
-}
