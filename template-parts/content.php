@@ -4,9 +4,9 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
           <h1><h1><?php the_title(); ?></h1>
-          <?php if (! empty(get_post_meta( get_the_ID(), '_clean_blogsubtitle', true )) ){ ?>
+          
           <h2 class="subheading"><?php echo get_post_meta( get_the_ID(), '_clean_blogsubtitle', true ); ?></h2>
-          <?php } ?>
+          
           <span class="meta">Posted by
             <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>"><?php the_author() ?></a>
             on <?php the_date(); ?></span>
