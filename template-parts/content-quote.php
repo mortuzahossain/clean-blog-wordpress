@@ -16,7 +16,7 @@
   </div>
 </header>
 
-<article>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="container">
     <div class="row">
       <div class="container">

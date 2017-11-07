@@ -8,13 +8,13 @@
     <meta name="description" content="<?php bloginfo( 'description' ) ?>">
     <meta name="author" content="<?php bloginfo( 'author_link' ) ?>">
 
-    <title><?php bloginfo( 'title' ) ?></title>
+    <title><?php wp_title( '|', false, 'right' ); ?></title>
 
     <?php wp_head(); ?>
 
   </head>
 
-  <body>
+  <body <?php body_class(  ); ?>>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">

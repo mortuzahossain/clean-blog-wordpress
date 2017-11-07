@@ -16,11 +16,16 @@
   </div>
 </header>
 
-<article>
-  <div class="container">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div class="container" >
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <?php the_content(); ?>
+        <?php wp_link_pages('before=<p>&after=</p>&next_or_number=number&pagelink=page %'); ?>
+        <div class="navigation">
+          <div class="alignleft"><?php previous_posts_link( '&laquo; Previous Entries' ); ?></div>
+          <div class="alignright"><?php next_posts_link( 'Next Entries &raquo;', '' ); ?></div>
+        </div>
       </div>
     </div>
   </div>
