@@ -24,6 +24,16 @@
           <?php the_content(); ?>
         </blockquote>
       </div>
+      <nav role="navigation" class="navigation posts-navigation">
+                <div class="nav-links">
+<?php
+    the_post_navigation(array(
+            'screen_reader_text' => ' ',
+            'next_text' => 'Older',
+            'prev_text' => 'Newer'
+        ));
+?>              </div>
+            </nav>
     </div>
   </div>
 </article>

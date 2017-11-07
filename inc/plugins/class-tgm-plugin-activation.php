@@ -48,69 +48,69 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				return;
 			}
 			$this->strings = array(
-				'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
-				'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
-				'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ),
-				'updating'                        => __( 'Updating Plugin: %s', 'tgmpa' ),
-				'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
+				'page_title'                      => __( 'Install Required Plugins', 'clean-blog' ),
+				'menu_title'                      => __( 'Install Plugins', 'clean-blog' ),
+				'installing'                      => __( 'Installing Plugin: %s', 'clean-blog' ),
+				'updating'                        => __( 'Updating Plugin: %s', 'clean-blog' ),
+				'oops'                            => __( 'Something went wrong with the plugin API.', 'clean-blog' ),
 				'notice_can_install_required'     => _n_noop(
 					'This theme requires the following plugin: %1$s.',
 					'This theme requires the following plugins: %1$s.',
-					'tgmpa'
+					'clean-blog'
 				),
 				'notice_can_install_recommended'  => _n_noop(
 					'This theme recommends the following plugin: %1$s.',
 					'This theme recommends the following plugins: %1$s.',
-					'tgmpa'
+					'clean-blog'
 				),
 				'notice_ask_to_update'            => _n_noop(
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-					'tgmpa'
+					'clean-blog'
 				),
 				'notice_ask_to_update_maybe'      => _n_noop(
 					'There is an update available for: %1$s.',
 					'There are updates available for the following plugins: %1$s.',
-					'tgmpa'
+					'clean-blog'
 				),
 				'notice_can_activate_required'    => _n_noop(
 					'The following required plugin is currently inactive: %1$s.',
 					'The following required plugins are currently inactive: %1$s.',
-					'tgmpa'
+					'clean-blog'
 				),
 				'notice_can_activate_recommended' => _n_noop(
 					'The following recommended plugin is currently inactive: %1$s.',
 					'The following recommended plugins are currently inactive: %1$s.',
-					'tgmpa'
+					'clean-blog'
 				),
 				'install_link'                    => _n_noop(
 					'Begin installing plugin',
 					'Begin installing plugins',
-					'tgmpa'
+					'clean-blog'
 				),
 				'update_link'                     => _n_noop(
 					'Begin updating plugin',
 					'Begin updating plugins',
-					'tgmpa'
+					'clean-blog'
 				),
 				'activate_link'                   => _n_noop(
 					'Begin activating plugin',
 					'Begin activating plugins',
-					'tgmpa'
+					'clean-blog'
 				),
-				'return'                          => __( 'Return to Required Plugins Installer', 'tgmpa' ),
-				'dashboard'                       => __( 'Return to the Dashboard', 'tgmpa' ),
-				'plugin_activated'                => __( 'Plugin activated successfully.', 'tgmpa' ),
-				'activated_successfully'          => __( 'The following plugin was activated successfully:', 'tgmpa' ),
+				'return'                          => __( 'Return to Required Plugins Installer', 'clean-blog' ),
+				'dashboard'                       => __( 'Return to the Dashboard', 'clean-blog' ),
+				'plugin_activated'                => __( 'Plugin activated successfully.', 'clean-blog' ),
+				'activated_successfully'          => __( 'The following plugin was activated successfully:', 'clean-blog' ),
 				/* translators: 1: plugin name. */
-				'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'tgmpa' ),
+				'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'clean-blog' ),
 				/* translators: 1: plugin name. */
-				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'tgmpa' ),
+				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'clean-blog' ),
 				/* translators: 1: dashboard link. */
-				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'tgmpa' ),
-				'dismiss'                         => __( 'Dismiss this notice', 'tgmpa' ),
-				'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'tgmpa' ),
-				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'tgmpa' ),
+				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'clean-blog' ),
+				'dismiss'                         => __( 'Dismiss this notice', 'clean-blog' ),
+				'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'clean-blog' ),
+				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'clean-blog' ),
 			);
 
 			do_action( 'tgmpa_register' );
@@ -160,17 +160,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			add_action( 'admin_head', array( $this, 'admin_css' ) );
 		}
 		public function load_textdomain() {
-			if ( is_textdomain_loaded( 'tgmpa' ) ) {
+			if ( is_textdomain_loaded( 'clean-blog' ) ) {
 				return;
-			}
-
-			if ( false !== strpos( __FILE__, WP_PLUGIN_DIR ) || false !== strpos( __FILE__, WPMU_PLUGIN_DIR ) ) {
-				// Plugin, we'll need to adjust the file name.
-				add_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10, 2 );
-				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );
-				remove_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10 );
-			} else {
-				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );
 			}
 		}
 

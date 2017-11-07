@@ -24,6 +24,11 @@ function my_theme_register_required_plugins() {
 			'slug'      => 'menu-social-icons',
 			'required'  => true,
 		),
+		array(
+			'name'      => 'Slide To Top',
+			'slug'      => 'float-to-top-button',
+			'required'  => false,
+		),
 	);
 
 	$config = array(
