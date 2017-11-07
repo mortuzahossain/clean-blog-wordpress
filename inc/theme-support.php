@@ -1,5 +1,6 @@
 <?php
 function clean_blog_setup() {
+	load_theme_textdomain( 'clean-blog',  BASE.'/clean-blog');
 	add_theme_support( 'custom-background' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
