@@ -814,13 +814,25 @@ li>a>i {
 input#search-form {
     border-radius: 0;
 }
+
 form.form-inline.text-center {
     padding-top: 30px;
 }
 
-.search-no{
+.search-no {
     color: red;
     background: black;
     padding: 10px 20px;
     text-align: center;
+}
+
+ul>a.catagory {
+    background: rebeccapurple;
+    padding: 4px 10px;
+    color: #fff;
+}
+
+.catagory-title {
+    padding: 0px;
+    margin: 7px 0;
 }
