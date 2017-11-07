@@ -15,7 +15,7 @@
   </head>
 
   <body <?php body_class(  ); ?>>
-
+<?php if ( ! isset( $content_width ) ) $content_width = 900; ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
