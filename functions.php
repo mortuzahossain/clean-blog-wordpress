@@ -18,9 +18,9 @@ require_once (dirname(__FILE__).'/inc/plugins/class-tgm-plugin-activation.php');
 require_once (dirname(__FILE__).'/inc/plugins/init.php');
 
 
-add_filter('nav_menu_css_class','arg_menu_classes',110,3);
+add_filter('nav_menu_css_class','social_bottom_menu_classes',110,3);
 
-function arg_menu_classes($classes, $item, $args) {
+function social_bottom_menu_classes($classes, $item, $args) {
     if($args->theme_location == 'social_bottom') { // name need menu
         $classes[] = 'list-inline-item'; // add classes
     }
