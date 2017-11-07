@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1><?php bloginfo( 'title' ) ?></h1>
-              <span class="subheading"><?php bloginfo( 'description' ) ?></span>
+              <h1>Shearch For</h1>
+              <h2><?php echo get_search_query(); ?></h2>
               <?php get_search_form(); ?>
             </div>
           </div>
@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
-<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) { ?>
   <?php while ( have_posts() ) : the_post(); ?>    
             <div class="post-preview">
             <a href="<?php the_permalink(); ?>">
@@ -35,7 +35,18 @@
           </div>
           <hr>
   <?php endwhile; ?>
-<?php endif; ?>
+<?php } else { ?>
+
+      <div class="container">
+      <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto text-center">
+              <h1>Nothing Found For</h1>
+              <p class="search-no"><?php echo get_search_query(); ?></p>
+                <h1>You Can Go to <a href="<?php echo get_home_url() ?>">HOME PAGE</a> OR search again</h1>
+            </div>
+        </div>
+    </div>
+<?php } ?>
 
         <div class="clearfix">
 

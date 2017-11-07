@@ -8,7 +8,7 @@
           <h2 class="subheading"><?php echo get_post_meta( get_the_ID(), '_clean_blogsubtitle', true ); ?></h2>
           <?php } ?>
           <span class="meta">Posted by
-            <a href="<?php the_author_link() ?>"><?php the_author() ?></a>
+            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>"><?php the_author() ?></a>
             on <?php the_date(); ?></span>
             <?php echo get_the_tag_list(' <div class=""><p><span class="post-tags"><strong><i class="fa fa-tags"></i> Tags:</strong> ',', ','</p></div>');  ?>
         </div>

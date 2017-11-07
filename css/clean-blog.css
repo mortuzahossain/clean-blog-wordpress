@@ -807,3 +807,20 @@ li>a>i {
 .mx-auto>p>img {
     width: 100%;
 }
+
+
+/*Search Form*/
+
+input#search-form {
+    border-radius: 0;
+}
+form.form-inline.text-center {
+    padding-top: 30px;
+}
+
+.search-no{
+    color: red;
+    background: black;
+    padding: 10px 20px;
+    text-align: center;
+}
