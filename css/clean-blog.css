@@ -830,3 +830,13 @@ ul>a.catagory {
     padding: 0px;
     margin: 7px 0;
 }
+
+.blog-content img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: none !important;
+    }
+}

@@ -20,7 +20,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="container" >
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-8 col-md-10 mx-auto blog-content">
         <?php the_content(); ?>
         <?php wp_link_pages('before=<p>&after=</p>&next_or_number=number&pagelink=page %'); ?>
         <div class="navigation">
