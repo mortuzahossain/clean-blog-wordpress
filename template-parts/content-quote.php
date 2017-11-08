@@ -40,7 +40,7 @@
           echo trim( $output, $separator );
           ?>
 </ul>          
-<?php } ?> 
+<?php } ?>
 
 
       </div>
